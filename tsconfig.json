@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+      "target": "ES2022",
+      "module": "NodeNext",
+      "baseUrl": "./src",
+      "outDir": "./dist",
+      "removeComments": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "noImplicitAny": true,
+      "sourceMap": true,
+      "skipLibCheck": true
+  },
+  "include": [
+      "src/**/*"
+  ],
+  "exclude": [
+      "dist/**/*"
+  ]
+}
