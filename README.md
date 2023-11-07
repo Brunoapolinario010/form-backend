@@ -8,27 +8,36 @@ Para clonar o repositório você vai precisar do [Git](https://git-scm.com/) e d
 No seu terminal você deve digitar
 ```bash
 # Clonar o repositório
-$ git clone https://github.com/Brunoapolinario010/form-backend
+git clone https://github.com/Brunoapolinario010/form-backend
 
 # Acessar a pasta do repositório
-$ cd form-backend
+cd form-backend
 
 # Instalar as dependências
-$ npm install
+npm install
 
 # Rodar o app
-$ npm start
-````
+npm start
+```
+
+Antes de rodar o app deve ser criado um arquivo .env dentro da pasta form-backend contendo a url do banco de dados.
+```dotenv
+
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/form-backend?schema=public"
+
+```
+
+Caso deseje visualizar o banco de dados você pode abrir outro terminal e utilizar `npx prisma studio`.
 
 ## Endpoints
 
 Open endpoints require no Authentication.
 
-* `GET /users/` -> Retorna todos os usuários
-* `GET /users/:id` -> Retorna o usuário com id repassado por parâmetro
-* `POST /users/` -> Cria um usuário
+* `GET /users/` -> Retorna todos os usuários.
+* `GET /users/:id` -> Retorna o usuário com id repassado por parâmetro.
+* `POST /users?limit=value&page=value` -> Cria um usuário -> Os valores padrões caso não sejam enviados o limite e a pagina serão respectivamente 20 e 1.
 * `PUT /users/:id` -> Atualiza um campo do usuário
-* `DEL /users/:id` -> Deleta o usuário com id repassado por parâmetro
+* `DEL /users/:id` -> Deleta o usuário com id repassado por parâmetro.
 
 ## JSON para criação de usuário
 ```json
@@ -51,5 +60,5 @@ Open endpoints require no Authentication.
 
 ### TODO
 
-- [ ] Integrar com um banco de dados
-- [ ] Trocar as senhas por hashs no armazenamento dos dados do usuário
+- [x] Integrar com um banco de dados
+- [x] Trocar as senhas por hashs no armazenamento dos dados do usuário

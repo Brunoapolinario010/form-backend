@@ -6,14 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc --outDir dist && node dist/index.js",
-    "dev": "clear && nodemon"
+    "dev": "nodemon"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^5.5.2",
     "@types/cors": "^2.8.14",
     "@types/express": "^4.17.18",
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "nodemon": "^3.0.1",
@@ -21,7 +23,9 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/uuid": "^9.0.4",
+    "prisma": "^5.5.2",
     "uuid": "^9.0.1",
     "zod": "^3.22.2"
   }
