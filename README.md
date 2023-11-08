@@ -23,7 +23,11 @@ npm start
 Antes de rodar o app deve ser criado um arquivo .env dentro da pasta form-backend contendo a url do banco de dados.
 ```dotenv
 
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/form-backend?schema=public"
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DB_NAME?schema=SCHEMA"
+
+# Similar
+
+DATABASE_URL="postgresql://harry:hogwars@localhost:5432/form-backend?schema=public"
 
 ```
 
